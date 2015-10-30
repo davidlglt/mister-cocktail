@@ -1,0 +1,24 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1><span class="label label-success"><%= @cocktail.name%></span></h1>
+
+       <h2>Liste des ingrédient</h2>
+        <% @cocktail.doses.each do |dose|%>
+        <ul>
+          <li><%= dose.ingredient.name%></li>
+        </ul>
+        <% end %>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <p><%= link_to "Àjouter une dose", new_cocktail_dose_path(@cocktail)%></p>
+        <p><%= link_to "Retourner à la liste cocktails", cocktails_path%></p>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

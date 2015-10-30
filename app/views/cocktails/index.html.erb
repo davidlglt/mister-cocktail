@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+
+    <%@cocktails.each do |cocktail|%>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card-restaurant">
+          <h2><%=cocktail.name%></h2>
+          <%= link_to "Show", cocktail_path(cocktail), class: "btn btn-primary" %>
+        </div>
+      </div>
+
+    <%end%>
+  </div>
+</div>
+
